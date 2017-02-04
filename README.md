@@ -2,6 +2,10 @@ gRPC
 ====
 gRPC with Spring Boot
 
+### Client Testing
+
+Please refer GrpcAutoConfiguration for detail.
+
 ### References
 
 * proto3: https://developers.google.com/protocol-buffers/docs/proto3
