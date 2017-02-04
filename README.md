@@ -6,6 +6,8 @@ gRPC with Spring Boot
 
 Please refer GrpcAutoConfiguration for detail.
 
+    $ grpc_cli call localhost:6565  SayHello src/main/proto/greeter.proto "name: 'world'"  --enable_ssl=false
+
 ### References
 
 * proto3: https://developers.google.com/protocol-buffers/docs/proto3
