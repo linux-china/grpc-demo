@@ -24,4 +24,5 @@ Please refer GrpcAutoConfiguration for detail.
 * proto3: https://developers.google.com/protocol-buffers/docs/proto3
 * gRPC:  http://www.grpc.io/
 * gPRC Java: http://www.grpc.io/docs/quickstart/java.html
+* gRPC Java Issues: https://github.com/grpc/grpc-java/issues
 * Protobuf Maven Plugin: https://www.xolstice.org/protobuf-maven-plugin/
