@@ -1,4 +1,4 @@
-package org.mvnsearch.demo.client;
+package org.mvnsearch.service;
 
 /**
  * greeter service
