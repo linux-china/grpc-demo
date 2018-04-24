@@ -1,6 +1,7 @@
 package org.mvnsearch.demo.client;
 
 import org.mvnsearch.service.GreeterGrpc;
+import org.mvnsearch.service.GreeterService;
 import org.mvnsearch.service.HelloRequest;
 
 /**
@@ -17,5 +18,10 @@ public class GreeterServiceClient implements GreeterService {
 
     public String sayHello(String name) {
         return stub.sayHello(HelloRequest.newBuilder().setName(name).build()).getMessage();
+    }
+
+    @Override
+    public String sayHelloAgain(String name) {
+        return stub.sayHelloAgain(HelloRequest.newBuilder().setName(name).build()).getMessage();
     }
 }
