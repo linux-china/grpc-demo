@@ -1,29 +1,23 @@
 package org.mvnsearch.service.impl;
 
-import io.grpc.stub.StreamObserver;
-import org.lognet.springboot.grpc.GRpcService;
-import org.mvnsearch.service.GreeterGrpc;
-import org.mvnsearch.service.HelloReply;
-import org.mvnsearch.service.HelloRequest;
+import org.mvnsearch.service.GreeterService;
+import org.springframework.stereotype.Service;
 
 /**
- * greeter service impl
+ * greeter service implementation
  *
  * @author linux_china
  */
-@GRpcService
-public class GreeterServiceImpl extends GreeterGrpc.GreeterImplBase {
+@Service
+public class GreeterServiceImpl implements GreeterService {
+
     @Override
-    public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        HelloReply reply = HelloReply.newBuilder().setMessage("Hello " + request.getName()).build();
-        responseObserver.onNext(reply);
-        responseObserver.onCompleted();
+    public String sayHello(String name) {
+        return "Hello " + name;
     }
 
     @Override
-    public void sayHelloAgain(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        HelloReply reply = HelloReply.newBuilder().setMessage("Hello Again " + request.getName()).build();
-        responseObserver.onNext(reply);
-        responseObserver.onCompleted();
+    public String sayHelloAgain(String name) {
+        return "Hello Again" + name;
     }
 }
