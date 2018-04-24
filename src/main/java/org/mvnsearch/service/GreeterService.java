@@ -13,5 +13,7 @@ public interface GreeterService {
      * @param name name
      * @return message
      */
-    public String sayHello(String name);
+    String sayHello(String name);
+
+    String sayHelloAgain(String name);
 }
