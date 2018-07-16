@@ -26,3 +26,8 @@ Please refer GrpcAutoConfiguration for detail.
 * gPRC Java: http://www.grpc.io/docs/quickstart/java.html
 * gRPC Java Issues: https://github.com/grpc/grpc-java/issues
 * Protobuf Maven Plugin: https://www.xolstice.org/protobuf-maven-plugin/
+
+### Java without IDL
+
+* https://github.com/supercharger/grpc-proxy
+* https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
