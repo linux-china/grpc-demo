@@ -3,10 +3,7 @@ gRPC
 gRPC with Spring Boot
 
 ### Client Testing
-
-Please refer GrpcAutoConfiguration for detail.
-
-    $ grpc_cli call localhost:6565  SayHello src/main/proto/greeter.proto "name: 'world'"  --enable_ssl=false
+Now I use evans for gRPC client test, please refer https://github.com/ktr0731/evans for test. the demo is in 'src/main/proto'
 
 ### Load Balance
 
