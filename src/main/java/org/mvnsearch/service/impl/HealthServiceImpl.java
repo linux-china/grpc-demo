@@ -4,14 +4,14 @@ import io.grpc.health.v1.HealthCheckRequest;
 import io.grpc.health.v1.HealthCheckResponse;
 import io.grpc.health.v1.HealthGrpc;
 import io.grpc.stub.StreamObserver;
-import org.springframework.stereotype.Service;
+import org.lognet.springboot.grpc.GRpcService;
 
 /**
  * grpc health check
  *
  * @author linux_china
  */
-@Service
+@GRpcService
 public class HealthServiceImpl extends HealthGrpc.HealthImplBase {
     private HealthCheckResponse.ServingStatus servingStatus = HealthCheckResponse.ServingStatus.SERVING;
 
