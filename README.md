@@ -1,5 +1,5 @@
-gRPC
-====
+gRPC demo with Spring Boot
+==========================
 gRPC with Spring Boot
 
 ### Client Testing
@@ -16,6 +16,12 @@ Now I use evans for gRPC client test, please refer https://github.com/ktr0731/ev
             .build();
 
 ```
+
+### Health checking
+
+Please refer grpc-services-1.13.1.jar!/grpc/health/v1/health.proto and io.grpc.health.v1.HealthGrpc,
+and almost you should implement HealthGrpc.HealthImplBase for health checking, please check HealthServiceImpl.java
+
 ### References
 
 * proto3: https://developers.google.com/protocol-buffers/docs/proto3
