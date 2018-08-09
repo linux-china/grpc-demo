@@ -17,10 +17,14 @@ Now I use evans for gRPC client test, please refer https://github.com/ktr0731/ev
 
 ```
 
-### Health checking
+### Health check
 
 Please refer grpc-services-1.13.1.jar!/grpc/health/v1/health.proto and io.grpc.health.v1.HealthGrpc,
 and almost you should implement HealthGrpc.HealthImplBase for health checking, please check HealthServiceImpl.java
+```
+$ cd src/main/health-check
+$ evans
+```
 
 ### References
 
