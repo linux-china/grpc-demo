@@ -28,6 +28,7 @@ $ evans
 
 ### References
 
+* gRPC Wire format(gRPC over HTTP2): https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
 * proto3: https://developers.google.com/protocol-buffers/docs/proto3
 * gRPC:  http://www.grpc.io/
 * gPRC Java: http://www.grpc.io/docs/quickstart/java.html
