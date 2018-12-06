@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author linux_china
  */
 @GRpcService
-public class GreeterServiceGprcStubImpl extends GreeterGrpc.GreeterImplBase {
+public class GreeterServiceGrpcStubImpl extends GreeterGrpc.GreeterImplBase {
     @Autowired
     private GreeterService greeterService;
 
