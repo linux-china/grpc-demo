@@ -138,6 +138,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.mvnsearch.GrpcDemoApplication</mainClass>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
