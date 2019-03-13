@@ -1,37 +1,25 @@
 package org.mvnsearch.service.impl;
 
-import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
-import org.mvnsearch.service.GreeterGrpc;
-import org.mvnsearch.service.GreeterService;
 import org.mvnsearch.service.HelloReply;
 import org.mvnsearch.service.HelloRequest;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mvnsearch.service.ReactorGreeterGrpc;
+import reactor.core.publisher.Mono;
 
 /**
  * greeter service grpc stub impl
  *
  * @author linux_china
  */
-@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @GRpcService
-public class GreeterServiceGrpcStubImpl extends GreeterGrpc.GreeterImplBase {
-    @Autowired
-    private GreeterService greeterService;
-
+public class GreeterServiceGrpcStubImpl extends ReactorGreeterGrpc.GreeterImplBase {
     @Override
-    public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        greeterService.sayHello(request.getName())
-                .map(s -> HelloReply.newBuilder().setMessage(s).build())
-                .doFinally(signalType -> responseObserver.onCompleted())
-                .subscribe(responseObserver::onNext);
+    public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
+        return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello" + helloRequest.getName()).build());
     }
 
     @Override
-    public void sayHelloAgain(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        greeterService.sayHelloAgain(request.getName())
-                .map(s -> HelloReply.newBuilder().setMessage(s).build())
-                .doFinally(signalType -> responseObserver.onCompleted())
-                .subscribe(responseObserver::onNext);
+    public Mono<HelloReply> sayHelloAgain(Mono<HelloRequest> request) {
+        return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello Again" + helloRequest.getName()).build());
     }
 }
