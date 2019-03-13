@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  *
  * @author linux_china
  */
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @GRpcService
 public class GreeterServiceGrpcStubImpl extends GreeterGrpc.GreeterImplBase {
     @Autowired
@@ -20,15 +21,17 @@ public class GreeterServiceGrpcStubImpl extends GreeterGrpc.GreeterImplBase {
 
     @Override
     public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        HelloReply reply = HelloReply.newBuilder().setMessage(greeterService.sayHello(request.getName())).build();
-        responseObserver.onNext(reply);
-        responseObserver.onCompleted();
+        greeterService.sayHello(request.getName())
+                .map(s -> HelloReply.newBuilder().setMessage(s).build())
+                .doFinally(signalType -> responseObserver.onCompleted())
+                .subscribe(responseObserver::onNext);
     }
 
     @Override
     public void sayHelloAgain(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        HelloReply reply = HelloReply.newBuilder().setMessage(greeterService.sayHelloAgain(request.getName())).build();
-        responseObserver.onNext(reply);
-        responseObserver.onCompleted();
+        greeterService.sayHelloAgain(request.getName())
+                .map(s -> HelloReply.newBuilder().setMessage(s).build())
+                .doFinally(signalType -> responseObserver.onCompleted())
+                .subscribe(responseObserver::onNext);
     }
 }

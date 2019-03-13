@@ -2,6 +2,7 @@ package org.mvnsearch.service.impl;
 
 import org.mvnsearch.service.GreeterService;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 
 /**
  * greeter service implementation
@@ -12,12 +13,12 @@ import org.springframework.stereotype.Service;
 public class GreeterServiceImpl implements GreeterService {
 
     @Override
-    public String sayHello(String name) {
-        return "Hello " + name;
+    public Mono<String> sayHello(String name) {
+        return Mono.just("Hello " + name);
     }
 
     @Override
-    public String sayHelloAgain(String name) {
-        return "Hello Again" + name;
+    public Mono<String> sayHelloAgain(String name) {
+        return Mono.just("Hello Again" + name);
     }
 }

@@ -3,6 +3,7 @@ package org.mvnsearch.demo.client;
 import org.mvnsearch.service.GreeterGrpc;
 import org.mvnsearch.service.GreeterService;
 import org.mvnsearch.service.HelloRequest;
+import reactor.core.publisher.Mono;
 
 /**
  * greeter service client
@@ -16,12 +17,12 @@ public class GreeterServiceClient implements GreeterService {
         this.stub = stub;
     }
 
-    public String sayHello(String name) {
-        return stub.sayHello(HelloRequest.newBuilder().setName(name).build()).getMessage();
+    public Mono<String> sayHello(String name) {
+        return Mono.fromCallable(() -> stub.sayHello(HelloRequest.newBuilder().setName(name).build()).getMessage());
     }
 
     @Override
-    public String sayHelloAgain(String name) {
-        return stub.sayHelloAgain(HelloRequest.newBuilder().setName(name).build()).getMessage();
+    public Mono<String> sayHelloAgain(String name) {
+        return Mono.fromCallable(() -> stub.sayHelloAgain(HelloRequest.newBuilder().setName(name).build()).getMessage());
     }
 }

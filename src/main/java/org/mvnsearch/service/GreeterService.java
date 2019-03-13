@@ -1,5 +1,7 @@
 package org.mvnsearch.service;
 
+import reactor.core.publisher.Mono;
+
 /**
  * greeter service
  *
@@ -13,7 +15,7 @@ public interface GreeterService {
      * @param name name
      * @return message
      */
-    String sayHello(String name);
+    Mono<String> sayHello(String name);
 
-    String sayHelloAgain(String name);
+    Mono<String> sayHelloAgain(String name);
 }
