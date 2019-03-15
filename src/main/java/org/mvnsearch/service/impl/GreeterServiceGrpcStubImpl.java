@@ -15,11 +15,12 @@ import reactor.core.publisher.Mono;
 public class GreeterServiceGrpcStubImpl extends ReactorGreeterGrpc.GreeterImplBase {
     @Override
     public Mono<HelloReply> sayHello(Mono<HelloRequest> request) {
-        return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello" + helloRequest.getName()).build());
+        return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello " + helloRequest.getName())
+                .build());
     }
 
     @Override
     public Mono<HelloReply> sayHelloAgain(Mono<HelloRequest> request) {
-        return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello Again" + helloRequest.getName()).build());
+        return request.map(helloRequest -> HelloReply.newBuilder().setMessage("Hello Again " + helloRequest.getName()).build());
     }
 }
