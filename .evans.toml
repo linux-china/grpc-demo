@@ -1,0 +1,12 @@
+[default]
+protoPath = ["src/main/proto"]
+protoFile = ["greeter.proto"]
+package = "org.mvnsearch.service"
+service = "Greeter"
+
+[health]
+protoPath = ["src/main/health-check"]
+protoFile = ["health.proto"]
+package = "grpc.health.v1"
+service = "Health"
+
