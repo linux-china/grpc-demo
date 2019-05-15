@@ -38,6 +38,7 @@ Reactive programming with grpc-java: https://github.com/salesforce/reactive-grpc
 * gPRC Java: http://www.grpc.io/docs/quickstart/java.html
 * gRPC Java Issues: https://github.com/grpc/grpc-java/issues
 * Protobuf Maven Plugin: https://www.xolstice.org/protobuf-maven-plugin/
+* Protoc plugin for bringing together Kotlin, Protobuf, Coroutines, and gRPC: https://github.com/marcoferrer/kroto-plus
 
 ### Java without IDL
 
