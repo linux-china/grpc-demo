@@ -23,8 +23,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <reactor-bom.version>Californium-SR9</reactor-bom.version>
-        <protobuf-java.version>3.8.0</protobuf-java.version>
-        <grpc.version>1.22.0</grpc.version>
+        <protobuf-java.version>3.9.0</protobuf-java.version>
+        <grpc.version>1.22.1</grpc.version>
         <reactive-grpc.version>0.10.0</reactive-grpc.version>
         <junit5.version>5.5.0</junit5.version>
     </properties>
