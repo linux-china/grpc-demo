@@ -26,6 +26,17 @@ $ cd src/main/health-check
 $ evans
 ```
 
+### TLS
+
+Please consider to use mkcert for testing
+
+```
+ grpc:
+    security:
+      cert-chain: classpath:cert/server-cert.pem
+      private-key: file:../grpc-spring-boot-starter-demo/src/test/resources/cert/server-key.pem
+```
+
 ### Reactive gPRC
 
 Reactive programming with grpc-java: https://github.com/salesforce/reactive-grpc
