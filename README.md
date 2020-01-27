@@ -56,3 +56,5 @@ Reactive programming with grpc-java: https://github.com/salesforce/reactive-grpc
 
 * https://github.com/supercharger/grpc-proxy
 * https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
+* gRPC semantics: https://github.com/grpc/grpc/blob/ea6facf634569727b0e44099d66e9fba1046019d/doc/PROTOCOL-SEMANTICS.md
+* gRPC: Up and Running: https://learning.oreilly.com/library/view/grpc-up-and/9781492058328/
