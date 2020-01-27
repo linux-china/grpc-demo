@@ -23,7 +23,7 @@ public class GrpcAutoConfiguration {
     public void init() {
         channel = ManagedChannelBuilder.forAddress("localhost", 50051)
                 // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid needing certificates.
-                .usePlaintext(true).build();
+                .usePlaintext().build();
     }
 
     @PreDestroy
