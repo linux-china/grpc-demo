@@ -22,9 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <reactor-bom.version>Dysprosium-SR4</reactor-bom.version>
-        <protobuf-java.version>3.11.1</protobuf-java.version>
-        <grpc.version>1.27.0</grpc.version>
+        <reactor-bom.version>Dysprosium-SR5</reactor-bom.version>
+        <protobuf-java.version>3.11.4</protobuf-java.version>
+        <grpc.version>1.27.2</grpc.version>
         <reactive-grpc.version>1.0.0</reactive-grpc.version>
         <junit5.version>5.6.0</junit5.version>
     </properties>
@@ -72,7 +72,7 @@
         <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>3.5.1</version>
+            <version>3.5.2</version>
         </dependency>
         <dependency>
             <groupId>io.projectreactor</groupId>
