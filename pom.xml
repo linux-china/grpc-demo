@@ -70,6 +70,10 @@
             <artifactId>grpc-grpclb</artifactId>
         </dependency>
         <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-xds</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
             <version>3.5.2</version>
