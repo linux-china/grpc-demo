@@ -17,6 +17,17 @@ Now I use evans for gRPC client test, please refer https://github.com/ktr0731/ev
 
 ```
 
+* target: the compliant URI for NameResolver. URL can contains gRPC service name
+
+```
+class XdsNameResolverProvider extends NameResolverProvider {
+     
+     public XdsNameResolver newNameResolver(URI targetUri, Args args) { 
+     
+     }
+ }
+```
+
 ### Health check
 
 Please refer grpc-services-1.13.1.jar!/grpc/health/v1/health.proto and io.grpc.health.v1.HealthGrpc,
