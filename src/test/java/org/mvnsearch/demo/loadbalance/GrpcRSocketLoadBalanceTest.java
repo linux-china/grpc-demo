@@ -2,7 +2,7 @@ package org.mvnsearch.demo.loadbalance;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import io.grpc.xds.XdsNameResolverProvider;
+import io.grpc.NameResolverRegistry;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -23,10 +23,10 @@ public class GrpcRSocketLoadBalanceTest {
 
     @BeforeAll
     public void setUp() throws Exception {
+        NameResolverRegistry registry = NameResolverRegistry.getDefaultRegistry();
+        registry.register(new RSocketNameResolverProvider());
         managedChannel = ManagedChannelBuilder
                 .forTarget("rsocket://127.0.0.1:9999")
-                .nameResolverFactory(new RSocketNameResolverProvider())
-                //.nameResolverFactory(new XdsNameResolverProvider())
                 .usePlaintext()
                 .build();
         greeterBlockingStub = GreeterGrpc.newBlockingStub(managedChannel);
