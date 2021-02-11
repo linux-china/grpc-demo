@@ -15,18 +15,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <reactor-bom.version>2020.0.1</reactor-bom.version>
+        <reactor-bom.version>2020.0.2</reactor-bom.version>
         <protobuf-java.version>3.14.0</protobuf-java.version>
-        <grpc.version>1.33.1</grpc.version>
+        <grpc.version>1.35.0</grpc.version>
         <reactive-grpc.version>1.0.1</reactive-grpc.version>
-        <spring-boot.version>2.4.0</spring-boot.version>
-        <junit5.version>5.7.0</junit5.version>
+        <spring-boot.version>2.4.2</spring-boot.version>
+        <junit5.version>5.7.1</junit5.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>29.0-jre</version>
+            <version>30.0-jre</version>
         </dependency>
         <!--protobuf-->
         <dependency>
@@ -70,7 +70,7 @@
         <dependency>
             <groupId>io.github.lognet</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>4.2.3</version>
+            <version>4.4.3</version>
         </dependency>
         <dependency>
             <groupId>io.projectreactor</groupId>
@@ -191,13 +191,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>jcenter</id>
-            <url>https://jcenter.bintray.com/</url>
-        </repository>
-    </repositories>
-
 
 </project>
