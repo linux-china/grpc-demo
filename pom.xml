@@ -192,6 +192,19 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.mvnsearch</groupId>
+                <artifactId>proto-rsocket-plugin</artifactId>
+                <version>1.0.3</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>proto2rsocket</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
