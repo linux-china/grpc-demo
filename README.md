@@ -70,3 +70,9 @@ Reactive programming with grpc-java: https://github.com/salesforce/reactive-grpc
 * https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md
 * gRPC semantics: https://github.com/grpc/grpc/blob/ea6facf634569727b0e44099d66e9fba1046019d/doc/PROTOCOL-SEMANTICS.md
 * gRPC: Up and Running: https://learning.oreilly.com/library/view/grpc-up-and/9781492058328/
+
+### Tools
+
+* evans: more expressive universal gRPC client - https://github.com/ktr0731/evans 
+* BloomRPC: GUI Client for GRPC Services - https://github.com/bloomrpc/bloomrpc
+* gRPCurl: Like cURL, but for gRPC - https://github.com/fullstorydev/grpcurl
