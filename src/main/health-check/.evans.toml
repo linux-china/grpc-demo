@@ -1,4 +1,0 @@
-[default]
-protoFile = ["health.proto"]
-package = "grpc.health.v1"
-service = "Health"
